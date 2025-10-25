@@ -1,0 +1,83 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{csquotes}
+\usepackage{newtxtext}     
+\usepackage{microtype}  
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\definecolor{MyRed}{HTML}{B22222}
+\hypersetup{colorlinks=true, urlcolor=blue, linkcolor=black}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt} 
+\usepackage{enumitem}
+
+
+\onehalfspacing
+
+\begin{document}
+
+\begin{titlepage}
+  \centering
+  \includegraphics[width=1\textwidth]{Image_page_garde/ordi.jpg}\\[1cm]
+  {\LARGE Cahier d’Études et de Recherches}\\[0.5cm]
+  {\Large \input{Infos_perso/theme}}\\[2cm]
+  {\large \textsc{FOTUE Aris}}\\
+  {\large \input{Infos_perso/pilote}}\\
+  {\large Promotion : X2028}\\[2cm]
+  {\large \input{Infos_perso/date}}
+  \vfill
+  \thispagestyle{empty}
+\end{titlepage}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textsc{Informatique et Société}}
+\fancyhead[R]{Page \thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+
+\hypersetup{linkcolor=red}
+\tableofcontents
+\newpage
+
+\titleformat{\section}
+  {\Large\bfseries\color{MyRed}}
+  {\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\large\bfseries\color{MyRed}}
+  {\thesubsection}{0.8em}{}
+
+\section{Analyse des besoins}
+\subsection{Définition du contexte}
+\input{Analyse_I/Contexte}
+\subsection{Définition des besoins}
+\input{Analyse_I/besoins}
+\subsection{Définition des contraintes}
+\input{Analyse_I/Contraintes}
+\subsection{Définition de la problématique}
+\input{Analyse_I/problematique}
+\subsection{Généralisation}
+\input{Analyse_I/generalisation}
+
+\section{Plan d’action}
+\input{Analyse_I/plan_action}
+
+\section{Réalisation du plan d’action}
+\input{Recherches/recherche_plan_action}
+
+\section{Conclusion et retour sur les objectifs}
+\subsection{Validation des hypothèses}
+\input{Bilan/validation_hypotheses}
+
+\section{Bilan critique du travail effectué}
+\input{Bilan/bilan_critique}
+
+\input{Bilan/references}
+
+\end{document}
